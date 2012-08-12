@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, minimum-scale=1, maximum-scale=1">
+<title>jQuery Mobile Datepickerテスト</title>
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.mobile-1.0a4.1.min.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile.css"
+	rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/mobiscroll-2.0.full.min.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style3.css" />
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0a4.1.min.js"></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+<script type="text/javascript" src="js/mobile.js"></script>
+<script type="text/javascript" src="js/mobiscroll-2.0.full.min.js"></script>
+<script type="text/javascript">
+function onSign() {
+	location.href = "./calender.html";
+}
+//	});
+</script>
+</head>
+<body>
+
+	<div data-role="page" data-theme="b">
+		<header data-role="header">
+			<h1>MR.SYUHO</h1>
+		</header>
+		<div data-role="content">
+			<h1>welcome to the people!</h1>
+			<div class="animeTest">
+				<a href="#" onClick="onSign()">Sign up now!</a>
+			</div>
+			<h1>Let's play MR.SYUHO</h1>
+		</div>
+		<br>
+		<br>
+		<footer data-role="footer">
+			<h1>moustache & co</h1>
+		</footer>
+	</div>
+	
+</body>
+</html>

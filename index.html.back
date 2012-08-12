@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, minimum-scale=1, maximum-scale=1">
+<title>jQuery Mobile Datepickerテスト</title>
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.mobile-1.0a4.1.min.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile.css"
+	rel="stylesheet" />
+<link rel="stylesheet" type="text/css"
+	href="css/mobiscroll-2.0.full.min.css" />
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0a4.1.min.js"></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+<script type="text/javascript" src="js/mobile.js"></script>
+<script type="text/javascript" src="js/mobiscroll-2.0.full.min.js"></script>
+<script type="text/javascript">
+	$(".ui-datepicker-calendar").ready(function() {
+		$("td").live("click", function() {
+			var input = $('#test-date').val();
+			location.href = "./dateInput.html?" + input;
+			});
+		});
+//	});
+</script>
+</head>
+<body>
+
+	<div data-role="page" data-theme="b">
+		<header data-role="header">
+			<h1>MR.SYUHO act Mobile</h1>
+		</header>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div data-role="content">
+			<a href="calender.html" data-role="button" data-icon=“arrow-r” >Let's try input!</a>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<footer data-role="footer"> moustache & co </footer>
+	</div>
+	
+</body>
+</html>

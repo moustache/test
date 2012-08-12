@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>Mobiscroll</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0a4.1.min.css" rel="stylesheet" />
+	<link href="css/mobiscroll-2.0.full.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+	<script	type="text/javascript" src="js/jquery.mobile-1.0a4.1.min.js"></script>
+	<script src="js/mobiscroll-2.0.full.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function(){
+	    $('#i').scroller({
+	        preset: 'time',
+	        theme: 'default',
+	        display: 'modal',
+	        mode: 'scroller'
+	    });
+	    
+
+	    $('#show').click(function(){
+	        $('#i').scroller('show'); 
+	        return false;
+	    });
+	    $('#clear').click(function () {
+	        $('#i').val('');
+	        return false;
+	    });
+	});
+	$(function(){
+	    $('#i2').scroller({
+	        preset: 'time',
+	        theme: 'default',
+	        display: 'modal',
+	        mode: 'scroller'
+	    });
+	    
+
+	    $('#show').click(function(){
+	        $('#i2').scroller('show'); 
+	        return false;
+	    });
+	    $('#clear').click(function () {
+	        $('#i2').val('');
+	        return false;
+	    });
+	});	
+	</script>
+	<script type="text/javascript">
+	window.onload = function() {
+		
+	    var hash = new Array();
+	    var param;
+	    if(param = location.search){
+	        var parray = param.replace('?','').split('&');
+			document.getElementById('h1area').innerHTML = parray;
+	    }
+	}
+	function onBack() {
+		location.href = "./calender.html";
+	}
+	</script>
+</head>
+<body>
+	<div data-role="page" data-theme="b">
+		<div data-role="header" data-theme="a">
+			<h1 id="h1area"></h1>
+		</div>
+		<div data-role="content" data-theme="d">
+			<form id="testform">
+				<input id="i" name="i" />
+				<input id="i2" name="i2" />
+				<a href="#" id="show" class="btn">Show</a>
+				<a href="#" id="clear" class="btn">Clear</a>
+			</form>
+			<a href="#" data-role="button" data-icon=“check” data-theme="b" >enter</a>
+			<a href="#" onClick="onBack()">Back</a>
+		</div>
+	</div>
+</body>
+</html>

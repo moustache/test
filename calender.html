@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<title>jQuery Mobile Datepickerテスト</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0a4.1.min.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/mobiscroll-2.0.full.min.css"  />
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script	type="text/javascript" src="js/jquery.mobile-1.0a4.1.min.js"></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+<script type="text/javascript" src="js/mobile.js"></script>
+<script type="text/javascript" src="js/mobiscroll-2.0.full.min.js" ></script>
+<script type="text/javascript">
+$(".ui-datepicker-calendar").ready(function() {
+	$("td").live("click", function() {
+		var input = $('#test-date').val();
+		location.href = "./dateInput.html?" + input;
+		});
+	});
+</script>
+</head>
+<body>
+		<div>
+			<input type="text" id="time" class="genField textEntry date" readonly="readonly" />
+		</div>
+		<div data-role="page" data-theme="b">
+			<div data-role="header">
+				<h1>Mr.Syuhou act mobile</h1>
+			</div>
+			<div data-role="content">
+				<form action="">
+					<fieldset data-role="fieldcontain">
+						<div>
+							<input type="date" name="test-date" id="test-date" value="" />
+						</div>
+						<div>
+							<input type="submit" name="" value="送信" data-theme="b" />
+						</div>
+					</fieldset>
+				</form>
+	        </div>
+			<!--/content-->
+			<div data-role="footer">
+				<h4>moustache & co</h4>
+			</div>
+			<!--/footer-->
+		</div>
+	<!--/page-->
+	
+</body>
+</html>
